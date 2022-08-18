@@ -1,0 +1,240 @@
+
+/*---------- GERAL ----------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+*{
+    font-family: 'Chewy', cursive;
+    font-weight: normal;
+}
+body{
+   background-color: #34393f; 
+   overflow-x: hidden;
+}
+
+.background{
+    background-image: url("../Imagens/cerebro.png");
+    background-size: 1635px;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.1;
+    position: absolute;
+    top:0px;
+    left:0px;
+    z-index: -1;
+}
+
+
+/*---------- SESSÃO - TÍTULO ----------*/
+
+.titulo{
+    width: 510px;
+    height: 300px;
+    /*background: red;*/
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.titulo h1{
+    color:white;
+    font-size: 90px;
+    letter-spacing: 2px;
+    text-shadow: -2px 3px 0px black;
+    position: relative;
+}
+
+.titulo .parte-01{
+    margin-left: 50px;
+}
+
+.titulo .parte-02{
+    top: 85px;
+    left: -50px;
+    font-size: 40px;
+}
+
+.titulo .parte-03{
+    top: 115px;
+    left: -165px;
+}
+
+.bonequinho-01{
+    width: 103px;
+    height: 174px;
+    position: relative;
+    top:85px;
+    left:-590px;
+}
+
+.bonequinho-02{
+    width: 103px;
+    height: 190px;
+    position: relative;
+    top: 77px;
+    left: -310px;
+}
+
+.triangulo-01{
+    position: relative;
+    width: 44px;
+    height: 42px;
+    top:105px;
+    left: -651px;
+    opacity: 0.7;
+    animation: 4s rotacao linear infinite;
+}
+
+.triangulo-02{
+    position: relative;
+    width: 44px;
+    height: 42px;
+    top: 105px;
+    left: -377px;
+    opacity: 0.7;
+    animation: 4s rotacao2 linear infinite;
+}
+
+
+/*---------- FORMULÁRIO ----------*/
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Fredoka One', cursive;
+    letter-spacing: 1px;
+}
+
+
+/*---------- IMPUT ----------*/
+
+.input-caixa{
+    position: relative;
+    width: 250px;
+}
+
+.input-caixa input{
+    width: 90%;
+    padding: 10px;
+    background: #34393f;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    outline: none;
+    color:#ffffff;
+    font-family: 'Fredoka One', cursive;
+    letter-spacing: 1px;
+    cursor:pointer;
+}
+
+.input-caixa span{
+    color:#8d8a8a;
+    position: absolute;
+    left:0;
+    padding:13px 0px 0px 15px;
+    pointer-events: none;
+    font-size: 15px;
+    transition: 0.5s;
+}
+
+.input-caixa input:valid ~ span,
+.input-caixa input:focus ~ span{
+    color:#ffffff;
+    transform: translateX(10px)translateY(-7px);
+    font-size: 12px;
+    padding: 0 10px;
+    background: #34393f;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+}
+
+
+/*---------- BOTÃO - INICIAR ----------*/
+
+ button {
+    margin-top: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    transition: all .5s;
+    width: 180px;
+    height: 40px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+button span {
+    display: inline-block;
+    position: relative;
+    transition: all .5s;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.botao-iniciar {
+    background: #b3163c;
+    display: flex;
+    justify-content: center;
+    border-radius: 12px;
+    color: #FFF;
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.6);
+    padding: 0;
+    outline-offset: 4px;
+}
+
+.botao-iniciar span {
+    display: block;
+    font-size: 20px;
+    letter-spacing: 3px;
+    padding: 8px 53px;
+    border-radius: 12px;
+    background: #ec436c;
+    transform: translateY(-7px);
+}
+
+.botao-iniciar:hover span {
+    transform: translateY(-6px);
+}
+
+.botao-iniciar:active span {
+    transform: translateY(-1px);
+}
+
+
+
+/*---------- ANIMAÇÕES ----------*/
+
+@keyframes rotacao {
+    0%{
+        transform: rotatey(0deg);
+     }
+    50%{
+        transform: rotatey(180deg);
+     }
+    80%{
+        transform: rotatey(288deg);
+     }
+    100%{
+        transform: rotatey(360deg);
+     }
+ }
+
+ @keyframes rotacao2 {
+    0%{
+        transform: rotatex(0deg);
+     }
+    50%{
+        transform: rotatex(180deg);
+     }
+    80%{
+        transform: rotatex(288deg);
+     }
+    100%{
+        transform: rotatex(360deg);
+     }
+ }
